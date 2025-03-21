@@ -56,10 +56,9 @@
     <form action="{{ route('upload.submit') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <label for="photos" class="form-label">Fotoğraflarınızı seçin (Çoklu seçim yapabilirsiniz):</label>
-            <input type="file" name="photos[]" multiple class="form-control">
-        </div>
-        <button type="submit" class="btn btn-upload">📸 Fotoğrafları Yükle</button>
+            <label for="photos" class="form-label">Fotoğraf ve videolarınızı seçin (Çoklu seçim yapabilirsiniz):</label>
+            <input type="file" name="photos[]" multiple class="form-control" accept="image/*, video/*">        </div>
+        <button type="submit" class="btn btn-upload">📸 Fotoğraf ve Videoları Yükle</button>
     </form>
 
     @if (session('success'))
@@ -69,7 +68,7 @@
     @endif
 
     <div class="privacy-notice">
-        <p>📌 <strong>Gizlilik Esastır:</strong> Yüklediğiniz fotoğraflar sadece Hatice Nur ve Batuhan tarafından görülebilir. Başka hiçbir misafir yüklenen fotoğrafları göremez. Fotoğraflarınız güvende!</p>
+        <p>📌 <strong>Gizlilik Esastır:</strong> Yüklediğiniz fotoğraf ve videolar sadece Hatice Nur ve Batuhan tarafından görülebilir. Başka hiçbir misafir yüklenen dosyaları göremez. Dosyalarınız güvende!</p>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
